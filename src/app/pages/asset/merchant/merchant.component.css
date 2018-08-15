@@ -1,0 +1,21 @@
+  /* 底部通用按钮组 */
+.footer-btn-group{
+    margin: 10px 0 0 10px;
+}
+.footer-btn-group .ant-btn{
+    height: 32px;
+    padding: 0 20px;
+}
+.footer-btn-group .ant-btn:first-child{
+    margin-right: 15px;
+}
+/* 表单 */
+.ant-form-item{
+    margin-bottom: 0;
+}
+.item-title{
+    margin: 10px 0;
+}
+.item-inner-last{
+ margin-left: -1.2%;   
+}
