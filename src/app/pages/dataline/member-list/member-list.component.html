@@ -1,0 +1,113 @@
+<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form">
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="4">
+      <nz-form-item nzFlex>
+        <nz-form-label>手机号</nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="手机号">
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="4">
+      <nz-form-item nzFlex>
+        <nz-form-label>姓名</nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="姓名">
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="4">
+      <nz-form-item nzFlex>
+        <nz-form-label>实名状态</nz-form-label>
+        <nz-form-control>
+          <nz-select style="width: 150px;" nzShowSearch nzAllowClear nzPlaceHolder="请选择一个状态" >
+            <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <nz-form-item nzFlex>
+        <nz-form-label>注册时间</nz-form-label>
+        <nz-form-control>
+          <nz-range-picker [nzSize]="size"></nz-range-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="4" style="text-align: right;">
+      <button nz-button [nzType]="'primary'">查询</button>
+    </div>
+  </div>
+
+</form>
+<nz-table #basicTable [nzData]="dataSet">
+  <thead>
+  <tr>
+    <th>序号</th>
+    <th>头像</th>
+    <th>手机号</th>
+    <th>姓名</th>
+    <th>身份证</th>
+    <th>收款总笔数</th>
+    <th>收款总金额</th>
+    <th>性别</th>
+    <th>省</th>
+    <th>是否实名认证</th>
+    <th>状态</th>
+    <th>注册时间</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>180****2685</td>
+    <td>陈**</td>
+    <td>3390** **** **** **12</td>
+    <td>100</td>
+    <td>10,000.00</td>
+    <td>男</td>
+    <td>浙江</td>
+    <td>是</td>
+    <td>正常</td>
+    <td>2018-01-01 10:10</td>
+    <td><a href="#">重置密码</a></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>180****2685</td>
+    <td>陈**</td>
+    <td>3390** **** **** **12</td>
+    <td>100</td>
+    <td>10,000.00</td>
+    <td>男</td>
+    <td>浙江</td>
+    <td>是</td>
+    <td>正常</td>
+    <td>2018-01-01 10:10</td>
+    <td><a href="#">重置密码</a></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>180****2685</td>
+    <td>陈**</td>
+    <td>3390** **** **** **12</td>
+    <td>100</td>
+    <td>10,000.00</td>
+    <td>男</td>
+    <td>浙江</td>
+    <td>是</td>
+    <td>正常</td>
+    <td>2018-01-01 10:10</td>
+    <td><a href="#">重置密码</a></td>
+  </tr>
+  </tbody>
+</nz-table>
+<nz-pagination [(nzPageIndex)]="current" [nzTotal]="50" nzShowSizeChanger nzShowQuickJumper
+               [nzShowTotal]="totalTemplate"></nz-pagination>
+<ng-template #totalTemplate let-total>共 11 条</ng-template>

@@ -1,0 +1,59 @@
+<nz-layout class="public-wrapper">
+
+  <button class="switch-button" nz-button [nzType]="'primary'" (click)="toggleCollapsed()"
+          [class.switch-button-mini]="isCollapsed">
+    <i class="anticon"
+       [class.anticon-menu-unfold]="isCollapsed"
+       [class.anticon-menu-fold]="!isCollapsed" (click)="isCollapsed=!isCollapsed">
+    </i>
+  </button>
+
+  <!------ Aside menu ------>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" [nzCollapsedWidth]="64"
+            [nzBreakpoint]="'lg'">
+    <div class="logo">
+      <img *ngIf="!isCollapsed" src="http://mclon-oms.oss-cn-hangzhou.aliyuncs.com/image/mankalong-logo.png">
+      <span *ngIf="isCollapsed" class="am-ft-white am-ft-12">MCLON</span>
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'" [class.ant-menu-collapsed]="!isCollapsed">
+      <li nz-submenu>
+        <span title><i class="anticon anticon-user"></i><span class="nav-text">数据统计</span></span>
+        <ul>
+          <li nz-menu-item routerLink="/dataline/member/list">我的用户</li>
+          <li nz-menu-item routerLink="/dataline/trade/flow">交易流水</li>
+          <li nz-menu-item routerLink="/dataline/settle/flow">结算记录</li>
+        </ul>
+      </li>
+      <li nz-submenu>
+        <span title><i class="anticon anticon-team"></i><span class="nav-text">资金账户</span></span>
+        <ul>
+          <li nz-menu-item routerLink="/asset/merchant">商户信息</li>
+          <li nz-menu-item routerLink="/asset/withdraw">提现流水</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <!------ /Aside menu ------>
+
+  <nz-layout class="layout-wrapper">
+    <!------ Header top ------>
+    <app-header></app-header>
+    <!--/选项卡-->
+
+    <!------ Content ------>
+    <nz-content class="content-wrap mgl0 mgr0 ">
+      <nz-breadcrumb style="margin:16px 0;">
+        <nz-breadcrumb-item>数据统计</nz-breadcrumb-item>
+        <nz-breadcrumb-item>交易流水</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div style="padding:24px; background: #fff; min-height: 360px;">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <!------ /Content ------>
+
+    <!------ Footer ------>
+    <!--<app-footer></app-footer>-->
+    <!------ /Footer ------>
+  </nz-layout>
+</nz-layout>

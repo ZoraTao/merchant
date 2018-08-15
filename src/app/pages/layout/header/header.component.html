@@ -1,0 +1,29 @@
+<!------ Header top ------>
+<nz-header class="header-top" [class.header-top-mini]="isCollapsed">
+
+    <div class="info-box fn-clear">
+        <!--news-->
+        <div class="news-tip fn-right">
+            <i class="anticon anticon-bell"></i>
+            <nz-badge [nzCount]="6">
+                <ng-template #content>
+                    <a class="head-example"></a>
+                </ng-template>
+            </nz-badge>
+            <div class="head-line">|</div>
+            <span class="mgl10 mgr10 am-ft-black">{{header_organizationName}}</span>
+            <!--user-->
+            <nz-dropdown [nzClickHide]="false">
+                <a class="ant-dropdown-link am-ft-black" nz-dropdown>
+            {{header_userName}} <i class="anticon anticon-down am-ft-14"></i>
+          </a>
+                <ul nz-menu>
+                    <li nz-menu-item>修改密码</li>
+                    <li nz-menu-item (click)="logout()">退出</li>
+                </ul>
+            </nz-dropdown>
+            <!--/user-->
+        </div>
+    </div>
+</nz-header>
+<!------ /Header top ------>

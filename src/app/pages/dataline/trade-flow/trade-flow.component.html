@@ -1,0 +1,160 @@
+<form nz-form [formGroup]="validateForm" class="ant-advanced-search-form">
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="6">
+      <nz-form-item nzFlex>
+        <nz-form-label>手机号</nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="手机号">
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <nz-form-item nzFlex>
+        <nz-form-label>姓名</nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="姓名">
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <nz-form-item nzFlex>
+        <nz-form-label>交易状态</nz-form-label>
+        <nz-form-control>
+          <nz-select style="width: 150px;" nzShowSearch nzAllowClear nzPlaceHolder="请选择一个状态">
+            <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="6">
+      <nz-form-item nzFlex>
+        <nz-form-label>结算状态</nz-form-label>
+        <nz-form-control>
+          <nz-select style="width: 150px;" nzShowSearch nzAllowClear nzPlaceHolder="请选择一个状态">
+            <nz-option nzLabel="Jack" nzValue="jack"></nz-option>
+            <nz-option nzLabel="Lucy" nzValue="lucy"></nz-option>
+            <nz-option nzLabel="Tom" nzValue="tom"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+
+  </div>
+  <div nz-row [nzGutter]="24">
+    <div nz-col [nzSpan]="6">
+      <nz-form-item nzFlex>
+        <nz-form-label>订单号</nz-form-label>
+        <nz-form-control>
+          <input nz-input placeholder="订单号">
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="14">
+      <nz-form-item nzFlex>
+        <nz-form-label>交易时间</nz-form-label>
+        <nz-form-control>
+          <nz-range-picker [nzSize]="size"></nz-range-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col [nzSpan]="4" style="text-align: left;">
+      <button nz-button [nzType]="'primary'">查询</button>
+    </div>
+  </div>
+</form>
+<nz-table #basicTable [nzData]="dataSet">
+  <thead>
+  <tr>
+    <th>序号</th>
+    <th>订单号</th>
+    <th>手机号</th>
+    <th>姓名</th>
+    <th>收款卡</th>
+    <th>到账卡</th>
+    <th>收款金额</th>
+    <th>服务费</th>
+    <th>扣率</th>
+    <th>扣率金额</th>
+    <th>到账金额</th>
+    <th>状态</th>
+    <th>结算状态</th>
+    <th>交易时间</th>
+    <th>结算时间</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>1</td>
+    <td>21321312321</td>
+    <td>180****2685</td>
+    <td>陈**</td>
+    <td>邮储银行-300****21321</td>
+    <td>邮储银行-300****21321</td>
+    <td>10000</td>
+    <td>1</td>
+    <td>0.65%</td>
+    <td>123</td>
+    <td>18000</td>
+    <td>失败-卡异常</td>
+    <td>未结算</td>
+    <td>2018-01-01 10:10</td>
+    <td>2018-01-01 10:10</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>21321312321</td>
+    <td>180****2685</td>
+    <td>陈**</td>
+    <td>邮储银行-300****21321</td>
+    <td>邮储银行-300****21321</td>
+    <td>10000</td>
+    <td>1</td>
+    <td>0.65%</td>
+    <td>123</td>
+    <td>18000</td>
+    <td>失败-卡异常</td>
+    <td>未结算</td>
+    <td>2018-01-01 10:10</td>
+    <td>2018-01-01 10:10</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>21321312321</td>
+    <td>180****2685</td>
+    <td>陈**</td>
+    <td>邮储银行-300****21321</td>
+    <td>邮储银行-300****21321</td>
+    <td>10000</td>
+    <td>1</td>
+    <td>0.65%</td>
+    <td>123</td>
+    <td>18000</td>
+    <td>失败-卡异常</td>
+    <td>未结算</td>
+    <td>2018-01-01 10:10</td>
+    <td>2018-01-01 10:10</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>21321312321</td>
+    <td>180****2685</td>
+    <td>陈**</td>
+    <td>邮储银行-300****21321</td>
+    <td>邮储银行-300****21321</td>
+    <td>10000</td>
+    <td>1</td>
+    <td>0.65%</td>
+    <td>123</td>
+    <td>18000</td>
+    <td>失败-卡异常</td>
+    <td>未结算</td>
+    <td>2018-01-01 10:10</td>
+    <td>2018-01-01 10:10</td>
+  </tr>
+  </tbody>
+</nz-table>
+<nz-pagination [(nzPageIndex)]="current" [nzTotal]="50" nzShowSizeChanger nzShowQuickJumper
+               [nzShowTotal]="totalTemplate"></nz-pagination>
+<ng-template #totalTemplate let-total>共 11 条</ng-template>

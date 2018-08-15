@@ -1,0 +1,64 @@
+.header-top {
+  background: #fff;
+  padding: 0 16px;
+  width: calc(100% - 200px);
+  width: -webkit-calc(100% - 200px);
+  position: absolute;
+  z-index: 2;
+  height: 50px;
+  line-height: 50px;
+}
+
+.header-top-mini {
+  left: 64px;
+}
+
+.search-box {
+  margin-left: 40px;
+  display: block;
+  float: left;
+}
+
+.info-box {
+  float: right;
+  min-width: 460px;
+}
+
+.news-tip {
+  display: inline-block;
+  position: relative;
+}
+
+.news-tip i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.news-tip .ant-badge {
+  top: -10px;
+}
+
+.user-hanle {
+  display: inline-block;
+  position: relative;
+  margin-left: 26px;
+  vertical-align: -7px;
+}
+
+.news-tip .ant-dropdown-link .anticon-down {
+  float: right;
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.head-line {
+  display: inline;
+  margin-left: 10px;
+  font-size: 19px;
+  color: #eee;
+}
+
+.closeTab {
+  margin-left: 45px !important;
+  margin-top: -1px;
+}
