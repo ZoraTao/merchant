@@ -10,7 +10,8 @@
 }
 
 :host ::ng-deep .ant-menu-dark,
-.ant-menu-dark .ant-menu-sub {
+:host ::ng-deep .ant-menu-dark .ant-menu-sub,
+:host ::ng-deep .ant-menu-dark .ant-menu-vertical.ant-menu-sub {
   background: #404040;
 }
 
@@ -29,6 +30,10 @@
   height: auto;
   line-height: 24px;
   white-space: inherit;
+}
+
+:host ::ng-deep .ant-menu-vertical .ant-menu-item:focus{
+  outline: none;
 }
 
 /*顶部按钮*/
@@ -80,6 +85,7 @@
 :host ::ng-deep .ant-menu-submenu-vertical .ant-menu-submenu-arrow{
   display: none;
 }
+
 
 /*menu scroll*/
 

@@ -843,3 +843,13 @@ body {
     color: #fff!important;
   }
 
+ .ant-layout-sider-collapsed + .layout-wrapper.ant-layout .header-top{
+    width: calc(100% - 70px);
+    width: -webkit-calc(100% - 70px);
+  }
+
+.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu-dark .ant-menu-vertical.ant-menu-sub {
+  background: #404040;
+}
